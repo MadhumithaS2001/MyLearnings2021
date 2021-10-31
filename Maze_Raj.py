@@ -79,3 +79,38 @@ for _ in range(t):
             if(j>0):
                 c+=1
     print(c)
+  
+'''
+def change(val,maze,out):
+    if(val in maze[i]):
+        for j in range(r):
+            out[j][maze[i].index(val)]=0
+        out[i]=[0 for j in range (c)]
+t=int(input())
+for _ in range(t):
+    r,c=map(int,input().split())
+    maze=[]
+    ma=[]
+    mi=[]
+    out=[]
+    for i in range(r):
+        maze.append(list(map(int,input().split())))
+        out.append(maze[i].copy())
+        ma.append(max(maze[i]))
+        mi.append(min(maze[i]))
+    _max=max(ma)
+    _min=min(mi)
+    del(ma)
+    del(mi)
+    for i in range(r):
+        if(_max in maze[i]):
+           change(_max,maze,out)
+        if(_min in maze[i]):
+            change(_min,maze,out)
+    c=0
+    for i in out:
+        for j in i:
+            if(j>0):
+                c+=1
+    print(c)
+    '''
